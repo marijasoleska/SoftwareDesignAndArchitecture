@@ -12,6 +12,9 @@ This project analyzes historical stock price and trading volume data, calculates
    - Long-term (1 month).
 4. Provide an easy-to-use interface (GUI mock-ups included).
 
-Marija Soleska
-Angela Mitrevska
-Marija Pavlichkovska
+## Authors
+
+- **Marija Soleska** 
+- **Angela Mitrevska** 
+- **Marija Pavlichkovska** 
+
