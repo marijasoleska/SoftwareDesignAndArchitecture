@@ -11,3 +11,7 @@ This project analyzes historical stock price and trading volume data, calculates
    - Medium-term (1 week).
    - Long-term (1 month).
 4. Provide an easy-to-use interface (GUI mock-ups included).
+
+Marija Soleska
+Angela Mitrevska
+Marija Pavlichkovska
