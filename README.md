@@ -13,7 +13,7 @@ This project analyzes historical stock price and trading volume data, calculates
 4. Provide an easy-to-use interface (GUI mock-ups included).
 ## Status
 
-This project is currently under development. This project is currently under development. Errors are being resolved, and the code is being refactored to enhance quality. Features and functionalities are gradually being implemented in an incremental and structured manner.
+This project is currently under development. Errors are being resolved, and the code is being refactored to enhance quality. Features and functionalities are gradually being implemented in an incremental and structured manner.
 
 
 ## Authors
