@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Analysis</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f6f9;
+            color: #333;
+        }
+
+        .container {
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            margin-top: 50px;
+        }
+
+        h1, h2 {
+            font-size: 32px;
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .analyze-section h2 {
+            color: #2c3e50;
+        }
+
+        .analyze-section {
+            margin-bottom: 30px;
+        }
+
+        .form-group label {
+            font-weight: bold;
+        }
+
+        .form-group select,
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+        }
+
+        .analyze-section button {
+            font-size: 16px;
+            padding: 10px 20px;
+            margin-top: 10px;
+        }
+
+        .btn-success, .btn-info {
+            font-size: 16px;
+            padding: 10px 20px;
+            background-color: #16a085 ;
+            color: white;
+            border-radius: 5px;
+            border: none;
+        }
+
+        /*.btn-info {*/
+        /*    background-color: #16a085;*/
+        /*}*/
+
+        .btn-success:hover, .btn-info:hover {
+            background-color: #13957e;
+            cursor: pointer;
+            color: white;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            color: #888;
+        }
+
+        .error {
+            color: red;
+            font-size: 16px;
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Stock Analysis</h1>
+        </header>
+
+        <div style="display: flex; justify-content: flex-end; align-items: center; margin: 10px;">
+            <form method="POST">
+                <button type="submit" name="action" value="scrape"
+                    style="font-size: 12px; padding: 5px 10px; background-color: #28a745; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                    Scrape Again?
+                </button>
+            </form>
+        </div>
+
+        <div class="analyze-section">
+            <h2>Analyze Company Data</h2>
+            <form method="POST">
+                <div class="form-group">
+                    <label for="company">Select Company:</label>
+                    <select name="company" id="company">
+                        <option value="">--Choose a Company--</option>
+                        {% for company in companies %}
+                            <option value="{{ company }}">{{ company }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="date_from">From:</label>
+                    <input type="date" name="date_from" id="date_from">
+                </div>
+
+                <div class="form-group">
+                    <label for="date_to">To:</label>
+                    <input type="date" name="date_to" id="date_to">
+                </div>
+
+                <button type="submit" name="action" value="analyze_table" class="btn btn-success">Analyze Table</button>
+                <button type="submit" name="action" value="analyze_technical" class="btn btn-success">Technical Analysis</button>
+                <button type="submit" name="action" value="analyze_fundamental" class="btn btn-success">Fundamental Analysis</button>
+                <button type="submit" name="action" value="analyze_lstm" class="btn btn-success">LSTM Analysis</button>
+            </form>
+        </div>
+
+        {% if error %}
+            <p class="error">{{ error }}</p>
+        {% endif %}
+
+        {% if table %}
+            <div class="data-table">
+                <h2>Data Table</h2>
+                <div>{{ table|safe }}</div>
+            </div>
+        {% endif %}
+
+    </div>
+</body>
+</html>
