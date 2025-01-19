@@ -2,6 +2,10 @@
 This project is a web application designed to analyze and predict stock market trends using a combination of technical analysis, fundamental analysis, and machine learning techniques.
 
 The application meets the functional and non-functional requirements outlined in the **Software Requirements Specification (SRS)** submitted in Homework 1. It provides an intuitive interface for exploring historical stock data, calculating indicators, analyzing sentiment, and forecasting future prices.
+
+## Preview of the Main Functionalities of the App
+[![Watch the Demo Video](https://via.placeholder.com/560x315?text=Demo+Video)](https://vimeo.com/1048311428)
+
 ## Features
 
 ### 1. Technical Analysis 
