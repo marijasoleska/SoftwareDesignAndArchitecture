@@ -4,7 +4,7 @@ This project is a web application designed to analyze and predict stock market t
 The application meets the functional and non-functional requirements outlined in the **Software Requirements Specification (SRS)** submitted in Homework 1. It provides an intuitive interface for exploring historical stock data, calculating indicators, analyzing sentiment, and forecasting future prices.
 
 ## Preview of the Main Functionalities of the App
-[![Watch the Demo Video](https://vimeo.com/1048735035?share=copy)]
+[![Watch the Demo Video]([https://vimeo.com/1048735035?share=copy](https://vimeo.com/user233934452))]
 
 ## Features
 
